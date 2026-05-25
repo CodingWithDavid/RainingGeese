@@ -45,6 +45,13 @@ Interactive honk game with a Vite + React frontend and an Express telemetry prox
 - `npm run test` - run frontend and API tests
 - `npm run start:api` - run only API server
 
+## GitHub Pages deployment
+
+- Workflow: `.github/workflows/deploy-pages.yml`
+- Uses Node 24 and current GitHub Actions versions (no deprecated Node 20 actions)
+- Builds `dist` and deploys it to GitHub Pages on pushes to `main`
+- `vite.config.ts` auto-infers the base path on GitHub Actions from `GITHUB_REPOSITORY`
+
 ## Telemetry contract
 
 Frontend sends:
