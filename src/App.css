@@ -1,0 +1,126 @@
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: linear-gradient(145deg, #38bdf8, #3b82f6 55%, #4f46e5);
+}
+
+.content-card {
+  position: relative;
+  z-index: 10;
+  width: min(520px, 100%);
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  background: rgba(8, 22, 44, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(6, 13, 28, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: #bfdbfe;
+  font-size: 0.78rem;
+}
+
+h1 {
+  margin: 8px 0 10px;
+  color: #f8fafc;
+  line-height: 1.1;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+}
+
+.subtitle {
+  margin: 0;
+  color: #dbeafe;
+  line-height: 1.4;
+}
+
+.stats-grid {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-tile {
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(15, 35, 66, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  gap: 4px;
+}
+
+.stat-label {
+  color: #bfdbfe;
+  font-size: 0.82rem;
+}
+
+.stat-value {
+  color: #f8fafc;
+  font-size: 1.35rem;
+}
+
+.goose-button {
+  margin-top: 22px;
+  width: 168px;
+  height: 168px;
+  border-radius: 999px;
+  border: 4px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(145deg, #facc15, #f97316);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.35);
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.goose-image {
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 10px rgba(15, 23, 42, 0.35));
+}
+
+.falling-goose {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 14px 10px rgba(2, 6, 23, 0.3));
+}
+
+.warning {
+  margin: 16px 0 0;
+  color: #fde68a;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 600px) {
+  .content-card {
+    padding: 22px 18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goose-button {
+    width: 146px;
+    height: 146px;
+  }
+
+  .goose-image {
+    width: 88px;
+    height: 88px;
+  }
+}
